@@ -1,400 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POLI 110 - TA Materials</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-        }
-
-        .header h1 {
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .header h2 {
-            font-size: 1.3rem;
-            font-weight: normal;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .course-info {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .ta-section {
-            background: #f5f5f5;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-left: 4px solid #333;
-        }
-
-        .ta-section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .weeks-grid {
-            display: grid;
-            gap: 25px;
-        }
-
-        .week-card {
-            border: 1px solid #ddd;
-            padding: 25px;
-            background: white;
-        }
-
-        .week-header {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-
-        .week-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .week-dates {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-        }
-
-        .week-topic {
-            color: #444;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .materials {
-            margin-top: 15px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            background: #333;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-right: 10px;
-            margin-bottom: 8px;
-            border: 1px solid #333;
-            transition: all 0.2s ease;
-        }
-
-        .download-btn:hover {
-            background: white;
-            color: #333;
-        }
-
-        .assignment-notice {
-            background: #efefef;
-            padding: 12px;
-            margin-top: 15px;
-            border-left: 3px solid #333;
-            font-size: 0.9rem;
-        }
-
-        .exam-week {
-            background: #f9f9f9;
-            border-left: 4px solid #333;
-        }
-
-        .no-class {
-            background: #fafafa;
-            color: #777;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            .header h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POLI 110 — Tutorial Materials — Aodi Cheng</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Times New Roman',Times,serif;line-height:1.65;color:#2b2b2b;background:#f8f9fa;padding:24px 16px}
+.container{max-width:880px;margin:0 auto;background:#fff;padding:48px 52px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+header{text-align:center;border-bottom:2px solid #333;padding-bottom:26px;margin-bottom:32px}
+header h1{font-size:2rem;font-weight:700;letter-spacing:.01em}
+header h2{font-size:1.15rem;font-weight:400;color:#555;margin-top:6px}
+.meta{font-size:.95rem;color:#666;margin-top:14px}
+.intro{background:#f5f5f5;border-left:4px solid #333;padding:20px 24px;margin-bottom:36px;font-size:.97rem}
+.intro p+p{margin-top:10px}
+h3.section{font-size:1.15rem;margin:34px 0 6px;padding-bottom:6px;border-bottom:1px solid #ddd;letter-spacing:.02em;text-transform:uppercase;font-size:.95rem;color:#444}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.96rem}
+th{text-align:left;font-weight:700;border-bottom:1.5px solid #333;padding:8px 10px 8px 0;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:#444}
+td{padding:10px 10px 10px 0;border-bottom:1px solid #ececec;vertical-align:top}
+td.wk{white-space:nowrap;color:#666;width:82px}
+td.dl{white-space:nowrap;width:190px}
+a{color:#0b3d91;text-decoration:none;border-bottom:1px solid rgba(11,61,145,.3)}
+a:hover{border-bottom-color:#0b3d91}
+.note{font-size:.88rem;color:#666;margin-top:26px;padding-top:18px;border-top:1px solid #ddd}
+footer{margin-top:38px;padding-top:18px;border-top:2px solid #333;font-size:.88rem;color:#666;text-align:center}
+@media(max-width:640px){.container{padding:28px 22px}td.dl,td.wk{width:auto;white-space:normal}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>POLI 110: Investigating Politics</h1>
-            <h2>An Introduction to Scientific Political Analysis</h2>
-            <div class="course-info">
-                <p><strong>Term:</strong> Winter 2025, Term 1</p>
-                <p><strong>Instructor:</strong> Michael Weaver</p>
-                <p><strong>Lecture:</strong> Tuesday, Thursday 14:00–15:20 (MATH 100)</p>
-            </div>
-        </div>
+<div class="container">
 
-        <div class="ta-section">
-            <h3>Teaching Assistant</h3>
-            <p><strong>Aodi Cheng</strong></p>
-            <p>Email: aodi1219@mail.ubc.ca</p>
-            <p>Tutorial materials and lecture notes available below</p>
-        </div>
+<header>
+  <h1>POLI 110: Investigating Politics</h1>
+  <h2>An Introduction to Scientific Political Analysis</h2>
+  <div class="meta">
+    Tutorial materials prepared by <strong>Aodi Cheng</strong>, Graduate Teaching Assistant<br>
+    Department of Political Science, University of British Columbia &middot; 2024&ndash;25
+  </div>
+</header>
 
-        <div class="weeks-grid">
-            
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 1</div>
-                    <div class="week-dates">September 2, 4</div>
-                    <div class="week-topic">Introduction / Truth and Politics</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 1 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
+<div class="intro">
+  <p>This page collects the tutorial slides, lecture notes, and practice exercises I wrote as a teaching assistant for POLI 110. The course introduces the logic of empirical inquiry in political science: what makes a claim scientific, how concepts become measurable variables, where measurement and sampling error come from, and how researchers reason about causation.</p>
+  <p>Everything here is my own writing, released for students and instructors to reuse. Course readings, examination materials, and any records identifying students are deliberately not included.</p>
+</div>
 
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 2</div>
-                    <div class="week-dates">September 9, 11</div>
-                    <div class="week-topic">Claims / What makes it "science"?</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 2 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
+<h3 class="section">Tutorial slides</h3>
+<table>
+  <tr><th>Week</th><th>Topic</th><th>Slides</th></tr>
+  <tr><td class="wk">Week 1</td><td>Introduction to scientific methods for political analysis</td><td class="dl"><a href="slides/week01-introduction-to-scientific-methods.pdf">PDF, 11 pp.</a></td></tr>
+  <tr><td class="wk">Week 6</td><td>Validity and measurement error</td><td class="dl"><a href="slides/week06-validity-and-measurement-error.pdf">PDF, 14 pp.</a></td></tr>
+  <tr><td class="wk">Week 7</td><td>Sampling error</td><td class="dl"><a href="slides/week07-sampling-error.pdf">PDF, 23 pp.</a></td></tr>
+  <tr><td class="wk">Week 9</td><td>Counterfactual causality</td><td class="dl"><a href="slides/week09-counterfactual-causality.pdf">PDF, 14 pp.</a></td></tr>
+  <tr><td class="wk">Week 10</td><td>Directed acyclic graphs: an overview</td><td class="dl"><a href="slides/week10-directed-acyclic-graphs.pdf">PDF, 10 pp.</a></td></tr>
+  <tr><td class="wk">Week 11</td><td>Understanding randomization in experiments</td><td class="dl"><a href="slides/week11-randomization-in-experiments.pdf">PDF, 7 pp.</a></td></tr>
+  <tr><td class="wk">Week 12</td><td>Blocking confounding with experiments</td><td class="dl"><a href="slides/week12-blocking-confounding-with-experiments.pdf">PDF, 13 pp.</a></td></tr>
+  <tr><td class="wk">Week 13</td><td>Conditioning-based versus design-based approaches</td><td class="dl"><a href="slides/week13-conditioning-vs-design-based-approaches.pdf">PDF, 13 pp.</a></td></tr>
+</table>
 
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 3</div>
-                    <div class="week-dates">September 16, 18</div>
-                    <div class="week-topic">Unscientific forms of evidence / Types of Empirical Claims</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 3 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
+<h3 class="section">Tutorial notes</h3>
+<table>
+  <tr><th>Week</th><th>Topic</th><th>Notes</th></tr>
+  <tr><td class="wk">Week 2</td><td>Effects of causes and causes of effects</td><td class="dl"><a href="notes/week02-effects-of-causes.pdf">PDF, 2 pp.</a></td></tr>
+  <tr><td class="wk">Week 3</td><td>Types of claims</td><td class="dl"><a href="notes/week03-types-of-claims.pdf">PDF, 3 pp.</a></td></tr>
+  <tr><td class="wk">Week 4</td><td>Bases of claims and the severity principle</td><td class="dl"><a href="notes/week04-bases-of-claims-and-the-severity-principle.pdf">PDF, 4 pp.</a></td></tr>
+  <tr><td class="wk">Week 5</td><td>From concepts to measurement: variables in social science</td><td class="dl"><a href="notes/week05-concepts-variables-and-measures.pdf">PDF, 4 pp.</a></td></tr>
+  <tr><td class="wk">Week 5</td><td>Measuring democratic backsliding and the comparability problem</td><td class="dl"><a href="notes/week05-measuring-democratic-backsliding.pdf">PDF, 6 pp.</a></td></tr>
+  <tr><td class="wk">Week 6</td><td>Validity and measurement error</td><td class="dl"><a href="notes/week06-validity-and-measurement-error.pdf">PDF, 7 pp.</a></td></tr>
+  <tr><td class="wk">Week 7</td><td>Understanding sampling error</td><td class="dl"><a href="notes/week07-understanding-sampling-error.pdf">PDF, 14 pp.</a></td></tr>
+  <tr><td class="wk">Week 7</td><td>Hypothesis testing and sampling: a summary</td><td class="dl"><a href="notes/week07-hypothesis-testing-summary.pdf">PDF, 3 pp.</a></td></tr>
+  <tr><td class="wk">Week 8</td><td>Interpreting charts and descriptive evidence</td><td class="dl"><a href="notes/week08-interpreting-charts.pdf">PDF, 2 pp.</a></td></tr>
+  <tr><td class="wk">Week 9</td><td>Selection bias and imputation in the potential outcomes framework</td><td class="dl"><a href="notes/week09-selection-bias-and-potential-outcomes.pdf">PDF, 11 pp.</a></td></tr>
+  <tr><td class="wk">Week 10</td><td>Correlation: what it is, and why it is not causation</td><td class="dl"><a href="notes/week10-correlation-and-causation.pdf">PDF, 6 pp.</a></td></tr>
+  <tr><td class="wk">Week 12</td><td>Blocking confounding with experiments: an expanded overview</td><td class="dl"><a href="notes/week12-blocking-confounding-with-experiments.pdf">PDF, 10 pp.</a></td></tr>
+  <tr><td class="wk">Supplement</td><td>Modernization theory and regime change</td><td class="dl"><a href="notes/modernization-theory-and-regime-change.pdf">PDF, 5 pp.</a></td></tr>
+  <tr><td class="wk">Supplement</td><td>Necessary and sufficient conditions in comparative research designs</td><td class="dl"><a href="notes/necessary-and-sufficient-conditions.pdf">PDF, 3 pp.</a></td></tr>
+  <tr><td class="wk">Supplement</td><td>Process tracing for causal inference</td><td class="dl"><a href="notes/process-tracing-for-causal-inference.pdf">PDF, 2 pp.</a></td></tr>
+</table>
 
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 4</div>
-                    <div class="week-dates">September 23, 25</div>
-                    <div class="week-topic">Evaluating Descriptive Claims / Variables and Validity</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 4 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-                <div class="assignment-notice">
-                    <strong>Assignment #1 due September 29</strong>
-                </div>
-            </div>
+<h3 class="section">Exercises</h3>
+<table>
+  <tr><th>Week</th><th>Topic</th><th>Files</th></tr>
+  <tr><td class="wk">Week 7</td><td>Hypothesis testing: polarization and right-wing populism</td><td class="dl"><a href="exercises/week07-hypothesis-testing-exercise.pdf">Exercise</a> &middot; <a href="exercises/week07-hypothesis-testing-answer-key.pdf">Answer key</a></td></tr>
+  <tr><td class="wk">Week 10</td><td>Using a DAG to compare design-based and conditioning-based approaches</td><td class="dl"><a href="exercises/week10-dag-group-activity.pdf">Group activity</a></td></tr>
+</table>
 
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 5</div>
-                    <div class="week-dates">September 30, October 2</div>
-                    <div class="week-topic">National Day (No Class) / Ecological Fallacy</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 5 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
+<p class="note">Instructors are welcome to adapt these materials with attribution. Course readings, lecture slides, examinations, and marking keys belong to the course instructors and are not distributed here.</p>
 
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 6</div>
-                    <div class="week-dates">October 7, 9</div>
-                    <div class="week-topic">Measurement Error</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 6 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
+<footer>
+  Aodi Cheng &middot; <a href="https://aodicheng1219.github.io">aodicheng1219.github.io</a> &middot;
+  <a href="https://github.com/AodiCheng1219/POLI110-A.Cheng-TA-material">Repository</a>
+</footer>
 
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 7</div>
-                    <div class="week-dates">October 14, 16</div>
-                    <div class="week-topic">Sampling Error / Sampling Error and Hypothesis Testing</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 7 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-                <div class="assignment-notice">
-                    <strong>Assignment #2 due October 13</strong>
-                </div>
-            </div>
-
-            <div class="week-card exam-week">
-                <div class="week-header">
-                    <div class="week-title">Week 8</div>
-                    <div class="week-dates">October 21, 23</div>
-                    <div class="week-topic">Midterm Review / MIDTERM EXAM</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Review Notes</a>
-                    <a href="#" class="download-btn">Study Guide</a>
-                </div>
-                <div class="assignment-notice">
-                    <strong>MIDTERM EXAM: October 23 (30% of final grade)</strong>
-                </div>
-            </div>
-
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 9</div>
-                    <div class="week-dates">October 28, 30</div>
-                    <div class="week-topic">What is Causality / Testing Causal Claims</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 9 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
-
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 10</div>
-                    <div class="week-dates">November 4, 6</div>
-                    <div class="week-topic">Correlation / Confounding</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 10 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
-
-            <div class="week-card no-class">
-                <div class="week-header">
-                    <div class="week-title">Week 11</div>
-                    <div class="week-dates">November 11, 13</div>
-                    <div class="week-topic">Remembrance Day (No Class) / Confounding</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 11 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
-
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 12</div>
-                    <div class="week-dates">November 18, 20</div>
-                    <div class="week-topic">Experiments / Conditioning</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 12 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-                <div class="assignment-notice">
-                    <strong>Assignment #3 due November 17</strong>
-                </div>
-            </div>
-
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 13</div>
-                    <div class="week-dates">November 25, 27</div>
-                    <div class="week-topic">Before and After</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 13 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-                <div class="assignment-notice">
-                    <strong>Assignment #4 due November 28</strong>
-                </div>
-            </div>
-
-            <div class="week-card">
-                <div class="week-header">
-                    <div class="week-title">Week 14</div>
-                    <div class="week-dates">December 2, 4</div>
-                    <div class="week-topic">Differences-in-Differences / Conclusion</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Week 14 Notes</a>
-                    <a href="#" class="download-btn">Tutorial Slides</a>
-                </div>
-            </div>
-
-            <div class="week-card exam-week">
-                <div class="week-header">
-                    <div class="week-title">Final Exam</div>
-                    <div class="week-dates">TBD</div>
-                    <div class="week-topic">Comprehensive Final Examination</div>
-                </div>
-                <div class="materials">
-                    <a href="#" class="download-btn">Final Review</a>
-                    <a href="#" class="download-btn">Study Materials</a>
-                </div>
-                <div class="assignment-notice">
-                    <strong>FINAL EXAM: TBD (40% of final grade)</strong>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="ta-section" style="margin-top: 40px; text-align: center;">
-            <h3>Contact Information</h3>
-            <p>Aodi Cheng - Teaching Assistant</p>
-            <p>aodi1219@mail.ubc.ca</p>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-                Materials updated weekly. All readings available on Canvas.
-            </p>
-        </div>
-    </div>
-
-    <script>
-        // Simple download feedback
-        document.querySelectorAll('.download-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const originalText = this.textContent;
-                this.style.background = '#666';
-                setTimeout(() => {
-                    this.style.background = '#333';
-                }, 500);
-            });
-        });
-    </script>
+</div>
 </body>
 </html>
